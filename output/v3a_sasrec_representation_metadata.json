@@ -1,0 +1,9 @@
+{
+  "num_examples": 2000000,
+  "embedding_dim": 64,
+  "max_sequence_length": 50,
+  "source_sequence_file": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_sequences.npy",
+  "source_training_data": "V3-A",
+  "generation_time_seconds": 1085.3768947124481,
+  "device": "cpu"
+}

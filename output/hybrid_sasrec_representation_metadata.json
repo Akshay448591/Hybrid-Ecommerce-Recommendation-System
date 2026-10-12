@@ -1,0 +1,35 @@
+{
+    "dataset": "H&M Personalized Fashion Recommendations",
+    "source_sequences": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_train_sequences.npy",
+    "source_sasrec_model": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\sasrec_model.pt",
+    "num_examples": 2000000,
+    "sequence_length": 50,
+    "embedding_dimension": 64,
+    "num_training_items": 74541,
+    "padding_id": 0,
+    "batch_size": 512,
+    "device": "cpu",
+    "representation_definition": "SASRec hidden representation at the last non-padding position",
+    "sequence_semantics": "Chronological prefix strictly before the positive target",
+    "future_information_used": false,
+    "target_information_used": false,
+    "sasrec_frozen": true,
+    "sasrec_eval_mode": true,
+    "output_shape": [
+        2000000,
+        64
+    ],
+    "output_dtype": "float32",
+    "precomputation_time_seconds": 816.6054229736328,
+    "validation": {
+        "input_sequence_shape": true,
+        "sasrec_architecture": true,
+        "sasrec_frozen": true,
+        "sasrec_eval_mode": true,
+        "forward_pass": true,
+        "representation_shape": true,
+        "finite_values": true,
+        "stored_vs_direct": true,
+        "reload_exact_equality": true
+    }
+}

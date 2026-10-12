@@ -1,0 +1,64 @@
+{
+    "dataset": "H&M Personalized Fashion Recommendations",
+    "source_file": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\data\\transactions_train_model_ids.parquet",
+    "num_training_interactions": 19836738,
+    "num_training_users": 778421,
+    "num_training_items": 74541,
+    "possible_next_item_examples": 19058317,
+    "num_sampled_examples": 2000000,
+    "user_id_column": "train_user_id",
+    "item_id_column": "train_item_id",
+    "same_day_tiebreaker": "item_index",
+    "chronological_sort": [
+        "train_user_id",
+        "t_dat",
+        "item_index"
+    ],
+    "max_sequence_length": 50,
+    "padding_id": 0,
+    "item_id_offset": 1,
+    "sequence_construction": {
+        "method": "next_item_prediction",
+        "prefix_before_target": true,
+        "truncate_to_recent_items": true,
+        "max_length": 50,
+        "left_padding": true,
+        "preserve_repeated_purchases": true,
+        "target_absence_from_prefix_required": false
+    },
+    "negative_sampling": {
+        "candidate_vocabulary": "training_items_only",
+        "num_items": 74541,
+        "exclude_positive": true,
+        "exclude_complete_user_training_history": true
+    },
+    "leakage_prevention": {
+        "future_interactions_excluded_from_prefix": true,
+        "target_not_used_in_prefix": true,
+        "future_history_not_used_for_sequence": true,
+        "prefix_is_strictly_before_target": true
+    },
+    "sampling": {
+        "method": "uniform_without_replacement",
+        "seed": 42
+    },
+    "output_files": {
+        "users": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_train_users.npy",
+        "positive_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_train_positive_items.npy",
+        "negative_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_train_negative_items.npy",
+        "sequences": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_train_sequences.npy",
+        "metadata": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_training_data_metadata.json"
+    },
+    "validation": {
+        "array_shapes": true,
+        "user_id_range": true,
+        "positive_item_range": true,
+        "negative_item_range": true,
+        "positive_not_equal_negative": true,
+        "sequence_id_range": true,
+        "prefix_target_semantics": true,
+        "negative_sampling": true,
+        "padding_convention": true,
+        "sequence_lengths": true
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "model": "Hybrid LightGCN + SASRec V2",
+    "evaluation_protocol": {
+        "population": "warm-start validation interactions",
+        "validation_interactions": 891329,
+        "warm_start_interactions": 751993,
+        "warm_start_users": 173203,
+        "recommendations_per_user": 20,
+        "training_users": 778421,
+        "training_items": 74541
+    },
+    "architecture": {
+        "lightgcn_embedding_dimension": 64,
+        "lightgcn_layers": 3,
+        "sasrec_embedding_dimension": 64,
+        "sasrec_heads": 2,
+        "sasrec_layers": 2,
+        "max_sequence_length": 50,
+        "component_normalization": "L2",
+        "user_projection": "Linear(128,128) + ReLU + Dropout(0.2)",
+        "item_projection": "Linear(128,128) + ReLU",
+        "pretrained_encoders_frozen": true,
+        "fusion_trainable_parameters": 33024,
+        "loss": "Pairwise Ranking"
+    },
+    "metrics": {
+        "P@10": 0.0027614995121331616,
+        "P@20": 0.0021463254100679554,
+        "R@10": 0.007488709599290349,
+        "R@20": 0.01165617661931529,
+        "HR@10": 0.025802093497225797,
+        "HR@20": 0.03967598713648147,
+        "NDCG@10": 0.005806561392199891,
+        "NDCG@20": 0.007200003038341244,
+        "MAP@10": 0.00302596617971685,
+        "MAP@20": 0.00327330860276951,
+        "Coverage@10": 0.012301954628996123,
+        "Coverage@20": 0.018634040326800015,
+        "Diversity@10": 0.03384297509023089,
+        "Diversity@20": 0.038498635511691845,
+        "Novelty@10": 11.674512310476244,
+        "Novelty@20": 11.848006543231783
+    },
+    "efficiency": {
+        "evaluation_time_seconds": 272.70879389999754,
+        "recommendation_rows_evaluated": 3464060,
+        "evaluation_users": 173203
+    },
+    "metric_definitions": {
+        "precision": "hits_at_k / k",
+        "recall": "hits_at_k / number_of_validation_targets",
+        "hit_rate": "1 if at least one validation target appears in top-k, else 0",
+        "ndcg": "binary relevance with logarithmic rank discount",
+        "map": "mean average precision using binary relevance",
+        "coverage": "unique recommended items / training item catalogue size",
+        "diversity": "mean pairwise cosine distance between recommended item representations",
+        "novelty": "-log2(training interaction popularity)"
+    },
+    "recommendation_file": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_v2_validation_recommendations.parquet"
+}

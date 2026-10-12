@@ -1,0 +1,281 @@
+{
+  "model": "Hybrid LightGCN + SASRec V2",
+  "configuration": {
+    "num_users": 778421,
+    "num_items": 74541,
+    "embedding_dim": 64,
+    "hybrid_dimension": 128,
+    "max_sequence_length": 50,
+    "diagnostic_users": 1000,
+    "seed": 42
+  },
+  "data": {
+    "training_interactions": 19836738,
+    "validation_interactions": 891329,
+    "warm_start_validation_users": 173203,
+    "diagnostic_users": 1000
+  },
+  "representation_statistics": {
+    "lightgcn_user": {
+      "shape": [
+        1000,
+        64
+      ],
+      "mean_norm": 0.2028367966413498,
+      "median_norm": 0.20256271958351135,
+      "std_norm": 0.018483413383364677,
+      "min_norm": 0.1394331455230713,
+      "max_norm": 0.2620401084423065,
+      "variance": 0.0006481737946160138,
+      "mean_feature_variance": 0.0006421127473004162,
+      "mean_value": 0.00014144033775664866,
+      "std_value": 0.025459257885813713,
+      "min_value": -0.10549765825271606,
+      "max_value": 0.11063726991415024
+    },
+    "sasrec_user": {
+      "shape": [
+        1000,
+        64
+      ],
+      "mean_norm": 3.519010305404663,
+      "median_norm": 3.4780306816101074,
+      "std_norm": 0.25060367584228516,
+      "min_norm": 2.9691286087036133,
+      "max_norm": 4.409168720245361,
+      "variance": 0.19445215165615082,
+      "mean_feature_variance": 0.023351553827524185,
+      "mean_value": -0.004504626616835594,
+      "std_value": 0.44096729159355164,
+      "min_value": -2.769308567047119,
+      "max_value": 1.8968682289123535
+    },
+    "hybrid_user": {
+      "shape": [
+        1000,
+        128
+      ],
+      "mean_norm": 2.611734390258789,
+      "median_norm": 2.550567150115967,
+      "std_norm": 0.5759096741676331,
+      "min_norm": 1.871851921081543,
+      "max_norm": 3.7151601314544678,
+      "variance": 0.03482744097709656,
+      "mean_feature_variance": 0.01871802657842636,
+      "mean_value": 0.14510008692741394,
+      "std_value": 0.18662111461162567,
+      "min_value": 0.0,
+      "max_value": 1.6906319856643677
+    },
+    "lightgcn_item": {
+      "shape": [
+        74541,
+        64
+      ],
+      "mean_norm": 0.2311079502105713,
+      "median_norm": 0.2274441123008728,
+      "std_norm": 0.030924350023269653,
+      "min_norm": 0.13283619284629822,
+      "max_norm": 0.7633866667747498,
+      "variance": 0.0008494786452502012,
+      "mean_feature_variance": 0.000828513759188354,
+      "mean_value": 9.514362318441272e-05,
+      "std_value": 0.02914581634104252,
+      "min_value": -0.21404239535331726,
+      "max_value": 0.2713313698768616
+    },
+    "sasrec_item": {
+      "shape": [
+        74541,
+        64
+      ],
+      "mean_norm": 2.013842821121216,
+      "median_norm": 1.8096508979797363,
+      "std_norm": 0.8031056523323059,
+      "min_norm": 0.6054794192314148,
+      "max_norm": 5.298310279846191,
+      "variance": 0.07343968749046326,
+      "mean_feature_variance": 0.05295070260763168,
+      "mean_value": -0.0025003585033118725,
+      "std_value": 0.2709975838661194,
+      "min_value": -1.0614033937454224,
+      "max_value": 1.1144686937332153
+    },
+    "hybrid_item": {
+      "shape": [
+        74541,
+        128
+      ],
+      "mean_norm": 3.1661062240600586,
+      "median_norm": 2.8432788848876953,
+      "std_norm": 1.0457481145858765,
+      "min_norm": 1.7015827894210815,
+      "max_norm": 5.415754318237305,
+      "variance": 0.04441053047776222,
+      "mean_feature_variance": 0.03540720418095589,
+      "mean_value": 0.20602785050868988,
+      "std_value": 0.21073806285858154,
+      "min_value": 0.0,
+      "max_value": 2.1529879570007324
+    }
+  },
+  "score_statistics": {
+    "lightgcn": {
+      "mean": 0.0006932851392775774,
+      "std": 0.006002680864185095,
+      "min": -0.050413619726896286,
+      "max": 0.07788814604282379,
+      "median": 0.0006258772918954492
+    },
+    "sasrec": {
+      "mean": -1.1206841468811035,
+      "std": 1.7294985055923462,
+      "min": -13.176790237426758,
+      "max": 11.017430305480957,
+      "median": -1.0585675239562988
+    },
+    "hybrid": {
+      "mean": 3.386086940765381,
+      "std": 1.6450697183609009,
+      "min": 0.11570347100496292,
+      "max": 11.831239700317383,
+      "median": 2.8090062141418457
+    }
+  },
+  "score_correlations": {
+    "lightgcn_vs_sasrec": 0.082387832448744,
+    "lightgcn_vs_hybrid": 0.14702927956424647,
+    "sasrec_vs_hybrid": 0.6264721103368718
+  },
+  "component_contribution": {
+    "lightgcn_component": {
+      "mean": 1.5436848402023315,
+      "std": 0.8363385796546936,
+      "min": 0.01901913806796074,
+      "max": 6.18260383605957
+    },
+    "sasrec_component": {
+      "mean": 1.8423993587493896,
+      "std": 0.9104416370391846,
+      "min": 0.04159827530384064,
+      "max": 6.976363658905029
+    },
+    "cross_lightgcn_user_sasrec_item": {
+      "mean": 1.867897868156433,
+      "std": 0.7614189982414246,
+      "min": 0.15799812972545624,
+      "max": 5.750739097595215
+    },
+    "cross_sasrec_user_lightgcn_item": {
+      "mean": 1.951070785522461,
+      "std": 0.9201328754425049,
+      "min": 0.19991663098335266,
+      "max": 6.256814479827881
+    },
+    "full_hybrid": {
+      "mean": 3.386086940765381,
+      "std": 1.6450697183609009,
+      "min": 0.11570347100496292,
+      "max": 11.831241607666016
+    },
+    "correlations_with_full_hybrid": {
+      "lightgcn_component": 0.9364539391862602,
+      "sasrec_component": 0.946658350341831,
+      "cross_lightgcn_user_sasrec_item": 0.639826845152335,
+      "cross_sasrec_user_lightgcn_item": 0.7341806845394019
+    }
+  },
+  "recommendation_concentration": {
+    "top10_unique_items": 917,
+    "top10_catalogue_coverage_percent": 1.2301954628996123,
+    "top20_unique_items": 1389,
+    "top20_catalogue_coverage_percent": 1.8634040326800014,
+    "top50_unique_items": 1389,
+    "top50_catalogue_coverage_percent": 1.8634040326800014,
+    "top100_unique_items": 1389,
+    "top100_catalogue_coverage_percent": 1.8634040326800014,
+    "most_recommended_item_count": 114561,
+    "median_recommendation_count_per_item": 23.0,
+    "mean_recommendation_count_per_item": 2493.9236861051118,
+    "top20_items_recommendation_share_percent": 39.19859933142036,
+    "unique_items": 1389,
+    "catalogue_coverage_percent": 1.8634040326800014
+  },
+  "top20_jaccard": {
+    "users_compared": 173203,
+    "pairwise_comparisons": 3463850,
+    "average_top20_jaccard": 0.15972007520835924
+  },
+  "v1_vs_v2": {
+    "recommendation_concentration": {
+      "unique_items": {
+        "v1": 149,
+        "v2": 1389,
+        "change": 1240
+      },
+      "coverage_percent": {
+        "v1": 0.1999,
+        "v2": 1.8634040326800014,
+        "change": 1.6635040326800015
+      },
+      "top10_coverage_percent": {
+        "v1": 43.1,
+        "v2": 1.2301954628996123,
+        "change": -41.869804537100386
+      },
+      "top20_coverage_percent": {
+        "v1": 69.13,
+        "v2": 1.8634040326800014,
+        "change": -67.26659596732
+      },
+      "top50_coverage_percent": {
+        "v1": 95.17,
+        "v2": 1.8634040326800014,
+        "change": -93.30659596732
+      },
+      "top100_coverage_percent": {
+        "v1": 99.69,
+        "v2": 1.8634040326800014,
+        "change": -97.82659596732
+      },
+      "average_top20_jaccard": {
+        "v1": 0.4547917,
+        "v2": 0.15972007520835924,
+        "change": -0.2950716247916408
+      }
+    },
+    "component_score_comparison": {
+      "score_std": {
+        "lightgcn": {
+          "v1": 0.00603444,
+          "v2": 0.006002680864185095
+        },
+        "sasrec": {
+          "v1": 1.45463276,
+          "v2": 1.7294985055923462
+        },
+        "hybrid": {
+          "v1": 1.75188911,
+          "v2": 1.6450697183609009
+        }
+      },
+      "hybrid_correlation": {
+        "lightgcn": {
+          "v1": 0.10712785,
+          "v2": 0.14702927956424647
+        },
+        "sasrec": {
+          "v1": 0.45486573,
+          "v2": 0.6264721103368718
+        }
+      }
+    }
+  },
+  "diagnostic_flags": {
+    "severe_catalogue_concentration": false,
+    "extreme_top100_concentration": false,
+    "high_list_similarity": false,
+    "sasrec_score_variance_dominates_lightgcn": true,
+    "hybrid_more_correlated_with_sasrec": true
+  }
+}

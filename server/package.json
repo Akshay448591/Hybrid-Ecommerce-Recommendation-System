@@ -1,0 +1,16 @@
+{
+  "name": "hybrid-mern-gateway",
+  "version": "2.0.0",
+  "description": "Express + Node.js API Gateway & MongoDB persistence layer for Hybrid Recommender Platform (MERN Architecture)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2"
+  }
+}

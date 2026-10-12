@@ -1,0 +1,23 @@
+{
+  "model": "Hybrid V3-A",
+  "architecture": "Adaptive graph-sequential hybrid",
+  "training_negative_strategy": "random negatives",
+  "lightgcn_hard_negatives": false,
+  "sasrec_hard_negatives": false,
+  "num_training_users": 778421,
+  "num_training_items": 74541,
+  "embedding_dim": 64,
+  "max_sequence_length": 50,
+  "validation_protocol": "warm-start user + warm-start item",
+  "warm_start_interactions": 751993,
+  "warm_start_users": 173203,
+  "top_k": 20,
+  "recommendation_rows": 3464060,
+  "unique_recommended_items": 1479,
+  "trainable_parameters": 41280,
+  "total_parameters": 59504832,
+  "lightgcn_frozen": true,
+  "sasrec_frozen": true,
+  "training_seen_items_excluded": true,
+  "generation_time_seconds": 569.5349688529968
+}

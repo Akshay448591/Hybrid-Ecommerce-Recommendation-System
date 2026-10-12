@@ -1,0 +1,17 @@
+{
+  "model": "Hybrid LightGCN + SASRec V2",
+  "checkpoint": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\hybrid_v2_model.pt",
+  "num_users_training": 778421,
+  "num_items_training": 74541,
+  "embedding_dim": 64,
+  "max_sequence_length": 50,
+  "top_k": 20,
+  "warm_start_users": 173203,
+  "recommendation_rows": 3464060,
+  "recommendations_per_user": 20,
+  "generation_time_seconds": 489.56096720695496,
+  "device": "cpu",
+  "sequence_source": "training history only",
+  "evaluation_population": "warm-start validation users with known validation items",
+  "seen_item_policy": "exclude training-seen items"
+}

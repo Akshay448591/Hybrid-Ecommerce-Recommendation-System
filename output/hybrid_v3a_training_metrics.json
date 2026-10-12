@@ -1,0 +1,57 @@
+{
+  "model": "Hybrid V3-A",
+  "architecture": "adaptive graph-sequential gate with separate projections",
+  "negative_strategy": "random",
+  "item_fusion_training": "item_fusion applied per batch with gradients enabled; frozen normalized LightGCN/SASRec item components are prepared once",
+  "num_users": 778421,
+  "num_items": 74541,
+  "embedding_dim": 64,
+  "max_sequence_length": 50,
+  "num_training_examples": 2000000,
+  "epochs": 5,
+  "batch_size": 4096,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "trainable_parameters": 41280,
+  "total_parameters": 59504832,
+  "seed": 42,
+  "total_training_time_seconds": 618.477854013443,
+  "training_history": [
+    {
+      "epoch": 1,
+      "loss": 0.2870610852794647,
+      "mean_gate": 0.5900154533538818,
+      "epoch_time_seconds": 225.4116461277008,
+      "examples": 2000000
+    },
+    {
+      "epoch": 2,
+      "loss": 0.24338712434387208,
+      "mean_gate": 0.5649121453208923,
+      "epoch_time_seconds": 101.9106674194336,
+      "examples": 2000000
+    },
+    {
+      "epoch": 3,
+      "loss": 0.23829826522922515,
+      "mean_gate": 0.5607088609580994,
+      "epoch_time_seconds": 100.10535526275635,
+      "examples": 2000000
+    },
+    {
+      "epoch": 4,
+      "loss": 0.23518846008110048,
+      "mean_gate": 0.5599734427375793,
+      "epoch_time_seconds": 98.914222240448,
+      "examples": 2000000
+    },
+    {
+      "epoch": 5,
+      "loss": 0.23299842526626588,
+      "mean_gate": 0.5602976096725464,
+      "epoch_time_seconds": 92.12795996665955,
+      "examples": 2000000
+    }
+  ],
+  "device": "cpu"
+}

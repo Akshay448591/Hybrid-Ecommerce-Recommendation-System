@@ -1,0 +1,52 @@
+{
+  "global_vocabulary": {
+    "users": 797782,
+    "items": 79026
+  },
+  "training_vocabulary": {
+    "users": 778421,
+    "items": 74541
+  },
+  "sasrec_vocabulary": {
+    "padding_id": 0,
+    "actual_item_ids_min": 1,
+    "actual_item_ids_max": 74541,
+    "embedding_rows": 74542
+  },
+  "validation": {
+    "total_interactions": 891329,
+    "warm_start_interactions": 751993,
+    "warm_start_users": 173203
+  },
+  "diagnostic": {
+    "users": 1000,
+    "top_k": 20,
+    "unique_recommended_items": 236,
+    "catalogue_coverage": 0.0031660428489019466,
+    "recommendation_list_jaccard": 0.2568070340899059
+  },
+  "representation": {
+    "hybrid_user_mean_norm": 4.008641242980957,
+    "hybrid_user_std_norm": 0.900042712688446,
+    "hybrid_item_mean_norm": 2.02956485748291,
+    "hybrid_item_std_norm": 0.797359824180603,
+    "hybrid_user_variance": 0.05798004940152168,
+    "hybrid_item_variance": 0.02688985876739025,
+    "lightgcn_user_variance": 0.0006529014208354056,
+    "sasrec_user_variance": 0.1852397322654724,
+    "lightgcn_item_variance": 0.0008494786452502012,
+    "sasrec_item_variance": 0.07343971729278564,
+    "component_user_cosine_mean": -0.015980837866663933
+  },
+  "scores": {
+    "mean": 5.101414680480957,
+    "std": 1.2568488121032715,
+    "min": 1.7484982013702393,
+    "max": 10.560761451721191
+  },
+  "top_item_concentration": {
+    "top10_fraction": 0.31865,
+    "top20_fraction": 0.5194,
+    "top50_fraction": 0.8117
+  }
+}

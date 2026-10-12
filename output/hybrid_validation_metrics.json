@@ -1,0 +1,28 @@
+{
+    "model": "Hybrid LightGCN + SASRec",
+    "evaluation_population": "warm_start",
+    "warm_start_users": 173203,
+    "warm_start_interactions": 751993,
+    "training_users": 778421,
+    "training_items": 74541,
+    "recommendations_per_user": 20,
+    "metrics": {
+        "P@10": 1.0392429692326349e-05,
+        "R@10": 1.5612242868699167e-05,
+        "HR@10": 0.00010392429692326346,
+        "NDCG@10": 1.0868882405651869e-05,
+        "MAP@10": 3.048830438752476e-06,
+        "P@20": 2.6847110038509726e-05,
+        "R@20": 8.6979581541321e-05,
+        "HR@20": 0.0005369422007701945,
+        "NDCG@20": 3.964129304828389e-05,
+        "MAP@20": 7.083786461348216e-06,
+        "Coverage@10": 0.0019049918836613407,
+        "Coverage@20": 0.0033136126427066983,
+        "Diversity@10": 1.0,
+        "Novelty@10": 18.691149155900508,
+        "Diversity@20": 1.0,
+        "Novelty@20": 18.508935367986954
+    },
+    "evaluation_time_seconds": 45.47764849662781
+}

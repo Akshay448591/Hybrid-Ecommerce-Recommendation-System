@@ -1,0 +1,58 @@
+{
+    "model": "Hybrid LightGCN + SASRec V2",
+    "seed": 42,
+    "device": "cpu",
+    "num_users": 778421,
+    "num_items": 74541,
+    "embedding_dim": 64,
+    "max_sequence_length": 50,
+    "num_heads": 2,
+    "num_layers": 2,
+    "dropout": 0.2,
+    "epochs": 5,
+    "batch_size": 4096,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "num_training_examples": 2000000,
+    "trainable_parameters": 33024,
+    "pretrained_encoders_frozen": true,
+    "user_component_normalization": "L2",
+    "item_component_normalization": "L2",
+    "user_projection": "Linear(128,128) + ReLU + Dropout",
+    "item_projection": "Linear(128,128) + ReLU",
+    "loss": "Pairwise Ranking",
+    "training_history": [
+        {
+            "epoch": 1,
+            "loss": 0.3239472504653931,
+            "examples": 2000000,
+            "epoch_time_seconds": 111.29918399999951
+        },
+        {
+            "epoch": 2,
+            "loss": 0.2909064763908386,
+            "examples": 2000000,
+            "epoch_time_seconds": 68.7088975000006
+        },
+        {
+            "epoch": 3,
+            "loss": 0.2868927189331055,
+            "examples": 2000000,
+            "epoch_time_seconds": 65.69012680000014
+        },
+        {
+            "epoch": 4,
+            "loss": 0.28482756273460386,
+            "examples": 2000000,
+            "epoch_time_seconds": 62.42009270000199
+        },
+        {
+            "epoch": 5,
+            "loss": 0.28320690023803713,
+            "examples": 2000000,
+            "epoch_time_seconds": 57.65259700000024
+        }
+    ],
+    "total_training_time_seconds": 365.7783782000006,
+    "final_loss": 0.28320690023803713
+}

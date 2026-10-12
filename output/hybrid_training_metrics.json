@@ -1,0 +1,45 @@
+{
+    "mode": "full",
+    "num_examples": 2000000,
+    "epochs": 5,
+    "batch_size": 4096,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "seed": 42,
+    "trainable_parameters": 16512,
+    "initial_loss": 0.7379857301712036,
+    "training_history": [
+        {
+            "epoch": 1,
+            "average_loss": 0.33768126416397093,
+            "epoch_time_seconds": 97.66832852363586
+        },
+        {
+            "epoch": 2,
+            "average_loss": 0.2926728738670349,
+            "epoch_time_seconds": 93.04605460166931
+        },
+        {
+            "epoch": 3,
+            "average_loss": 0.2899573017559052,
+            "epoch_time_seconds": 96.4660792350769
+        },
+        {
+            "epoch": 4,
+            "average_loss": 0.2885113419246674,
+            "epoch_time_seconds": 95.45493268966675
+        },
+        {
+            "epoch": 5,
+            "average_loss": 0.2878433816375732,
+            "epoch_time_seconds": 102.98360323905945
+        }
+    ],
+    "validation": {
+        "trainable_parameter_count": true,
+        "fusion_gradients_finite": true,
+        "frozen_lightgcn_gradients_absent": true,
+        "frozen_sasrec_gradients_absent": true,
+        "loss_finite": true
+    }
+}

@@ -1,0 +1,15 @@
+services:
+  # -------------------------------------------------------------
+  # Unified Web Service (Backend + Frontend together on 1 port)
+  # -------------------------------------------------------------
+  - type: web
+    name: hybrid-v2-recommendation
+    env: python
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: "pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r backend/requirements.txt"
+    startCommand: "python -m uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12

@@ -1,0 +1,424 @@
+{
+  "configuration": {
+    "seed": 42,
+    "diagnostic_users": 1000,
+    "top_k": 20,
+    "global_num_users": 797782,
+    "global_num_items": 79026,
+    "training_num_users": 778421,
+    "training_num_items": 74541,
+    "embedding_dim": 64,
+    "max_sequence_length": 50
+  },
+  "representation_norms": {
+    "lightgcn_user": {
+      "mean": 0.20332692563533783,
+      "median": 0.20298440754413605,
+      "std": 0.01825680024921894
+    },
+    "sasrec_user": {
+      "mean": 1.8093986511230469,
+      "median": 3.275254487991333,
+      "std": 1.7663084268569946
+    },
+    "hybrid_user": {
+      "mean": 3.7372426986694336,
+      "median": 2.8805484771728516,
+      "std": 1.712558388710022
+    },
+    "lightgcn_item": {
+      "mean": 0.2311079502105713,
+      "median": 0.2274441123008728,
+      "std": 0.030924558639526367
+    },
+    "sasrec_item": {
+      "mean": 2.0138425827026367,
+      "median": 1.8096508979797363,
+      "std": 0.8031110167503357
+    },
+    "hybrid_item": {
+      "mean": 2.02956485748291,
+      "median": 1.825106143951416,
+      "std": 0.797359824180603
+    }
+  },
+  "score_correlations": {
+    "lightgcn_vs_sasrec": 0.06170473702766867,
+    "lightgcn_vs_hybrid": 0.10712784525115517,
+    "sasrec_vs_hybrid": 0.4548657270605478
+  },
+  "lightgcn": {
+    "shape": [
+      1000,
+      20
+    ],
+    "unique_items": 9844,
+    "coverage": 0.13206155001945238,
+    "average_top20_jaccard": 0.011919762152397706,
+    "top20_jaccard_std": 0.028835018586612613,
+    "top20_jaccard_min": 0.0,
+    "top_concentration": {
+      "10": 0.0779,
+      "20": 0.1119,
+      "50": 0.17465,
+      "100": 0.22555
+    },
+    "top_items": [
+      {
+        "item_id": 43493,
+        "count": 309,
+        "percentage": 1.545
+      },
+      {
+        "item_id": 43494,
+        "count": 259,
+        "percentage": 1.295
+      },
+      {
+        "item_id": 1350,
+        "count": 165,
+        "percentage": 0.8250000000000001
+      },
+      {
+        "item_id": 43495,
+        "count": 162,
+        "percentage": 0.8099999999999999
+      },
+      {
+        "item_id": 1759,
+        "count": 151,
+        "percentage": 0.755
+      },
+      {
+        "item_id": 57796,
+        "count": 130,
+        "percentage": 0.65
+      },
+      {
+        "item_id": 10078,
+        "count": 120,
+        "percentage": 0.6
+      },
+      {
+        "item_id": 11382,
+        "count": 99,
+        "percentage": 0.49500000000000005
+      },
+      {
+        "item_id": 17911,
+        "count": 83,
+        "percentage": 0.415
+      },
+      {
+        "item_id": 1774,
+        "count": 80,
+        "percentage": 0.4
+      },
+      {
+        "item_id": 13260,
+        "count": 79,
+        "percentage": 0.395
+      },
+      {
+        "item_id": 33412,
+        "count": 76,
+        "percentage": 0.38
+      },
+      {
+        "item_id": 17492,
+        "count": 75,
+        "percentage": 0.375
+      },
+      {
+        "item_id": 1351,
+        "count": 74,
+        "percentage": 0.37
+      },
+      {
+        "item_id": 16282,
+        "count": 71,
+        "percentage": 0.35500000000000004
+      },
+      {
+        "item_id": 10718,
+        "count": 64,
+        "percentage": 0.32
+      },
+      {
+        "item_id": 2906,
+        "count": 63,
+        "percentage": 0.315
+      },
+      {
+        "item_id": 54,
+        "count": 63,
+        "percentage": 0.315
+      },
+      {
+        "item_id": 300,
+        "count": 58,
+        "percentage": 0.29
+      },
+      {
+        "item_id": 43503,
+        "count": 57,
+        "percentage": 0.28500000000000003
+      }
+    ]
+  },
+  "sasrec": {
+    "shape": [
+      1000,
+      20
+    ],
+    "unique_items": 89,
+    "coverage": 0.001193973786238446,
+    "average_top20_jaccard": 0.38613525523827713,
+    "top20_jaccard_std": 0.4256675518001887,
+    "top20_jaccard_min": 0.0,
+    "top_concentration": {
+      "10": 0.25135,
+      "20": 0.49435,
+      "50": 0.9569,
+      "100": 1.0
+    },
+    "top_items": [
+      {
+        "item_id": 43493,
+        "count": 514,
+        "percentage": 2.5700000000000003
+      },
+      {
+        "item_id": 10065,
+        "count": 514,
+        "percentage": 2.5700000000000003
+      },
+      {
+        "item_id": 3456,
+        "count": 509,
+        "percentage": 2.545
+      },
+      {
+        "item_id": 13260,
+        "count": 508,
+        "percentage": 2.54
+      },
+      {
+        "item_id": 1759,
+        "count": 507,
+        "percentage": 2.535
+      },
+      {
+        "item_id": 5549,
+        "count": 507,
+        "percentage": 2.535
+      },
+      {
+        "item_id": 33412,
+        "count": 499,
+        "percentage": 2.495
+      },
+      {
+        "item_id": 17911,
+        "count": 492,
+        "percentage": 2.46
+      },
+      {
+        "item_id": 10078,
+        "count": 489,
+        "percentage": 2.445
+      },
+      {
+        "item_id": 10071,
+        "count": 488,
+        "percentage": 2.44
+      },
+      {
+        "item_id": 18,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 10,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 4,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 16,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 12,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 8,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 19,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 1,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 11,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      },
+      {
+        "item_id": 5,
+        "count": 486,
+        "percentage": 2.4299999999999997
+      }
+    ]
+  },
+  "hybrid": {
+    "shape": [
+      1000,
+      20
+    ],
+    "unique_items": 149,
+    "coverage": 0.0019988999342643644,
+    "average_top20_jaccard": 0.45479170023206256,
+    "top20_jaccard_std": 0.29455968834707197,
+    "top20_jaccard_min": 0.0,
+    "top_concentration": {
+      "10": 0.431,
+      "20": 0.6913,
+      "50": 0.95165,
+      "100": 0.99695
+    },
+    "top_items": [
+      {
+        "item_id": 10078,
+        "count": 987,
+        "percentage": 4.935
+      },
+      {
+        "item_id": 43493,
+        "count": 983,
+        "percentage": 4.915
+      },
+      {
+        "item_id": 1350,
+        "count": 939,
+        "percentage": 4.695
+      },
+      {
+        "item_id": 43494,
+        "count": 934,
+        "percentage": 4.67
+      },
+      {
+        "item_id": 1759,
+        "count": 917,
+        "percentage": 4.585
+      },
+      {
+        "item_id": 11382,
+        "count": 905,
+        "percentage": 4.5249999999999995
+      },
+      {
+        "item_id": 43495,
+        "count": 854,
+        "percentage": 4.2700000000000005
+      },
+      {
+        "item_id": 17911,
+        "count": 761,
+        "percentage": 3.805
+      },
+      {
+        "item_id": 33350,
+        "count": 691,
+        "percentage": 3.4549999999999996
+      },
+      {
+        "item_id": 10065,
+        "count": 649,
+        "percentage": 3.245
+      },
+      {
+        "item_id": 1774,
+        "count": 637,
+        "percentage": 3.1850000000000005
+      },
+      {
+        "item_id": 10071,
+        "count": 613,
+        "percentage": 3.065
+      },
+      {
+        "item_id": 13260,
+        "count": 574,
+        "percentage": 2.87
+      },
+      {
+        "item_id": 2906,
+        "count": 555,
+        "percentage": 2.775
+      },
+      {
+        "item_id": 37554,
+        "count": 528,
+        "percentage": 2.64
+      },
+      {
+        "item_id": 1351,
+        "count": 520,
+        "percentage": 2.6
+      },
+      {
+        "item_id": 17492,
+        "count": 487,
+        "percentage": 2.435
+      },
+      {
+        "item_id": 17910,
+        "count": 459,
+        "percentage": 2.2950000000000004
+      },
+      {
+        "item_id": 35753,
+        "count": 450,
+        "percentage": 2.25
+      },
+      {
+        "item_id": 54,
+        "count": 383,
+        "percentage": 1.915
+      }
+    ]
+  },
+  "representation_variance": {
+    "lightgcn_user": 0.0006483810720965266,
+    "sasrec_user": 0.05351642519235611,
+    "hybrid_user": 0.05180555209517479,
+    "lightgcn_item": 0.000828521850053221,
+    "sasrec_item": 0.05295119062066078,
+    "hybrid_item": 0.026889856904745102
+  },
+  "top20_global_jaccard": {
+    "lightgcn_vs_sasrec": 0.006077180188392586,
+    "lightgcn_vs_hybrid": 0.010618932038834952,
+    "sasrec_vs_hybrid": 0.1497584541062802
+  },
+  "component_contribution": {
+    "first_component_vs_hybrid": 0.5055127788403389,
+    "second_component_vs_hybrid": 0.9989388913605116
+  }
+}

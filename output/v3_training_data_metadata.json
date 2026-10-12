@@ -1,0 +1,52 @@
+{
+  "project": "Hybrid Ecommerce Recommendation Model",
+  "experiment": "V3",
+  "purpose": "Training data for adaptive graph-sequential hybrid recommendation model.",
+  "seed": 42,
+  "num_training_examples": 2000000,
+  "possible_next_item_examples": 19058317,
+  "num_training_users": 778421,
+  "num_training_items": 74541,
+  "embedding_dim": 64,
+  "max_sequence_length": 50,
+  "hard_negative_top_k": 100,
+  "padding_id": 0,
+  "actual_item_id_offset": 1,
+  "negative_sampling": {
+    "random": true,
+    "exclude_positive": true,
+    "exclude_complete_user_history": true
+  },
+  "hard_negative_sampling": {
+    "lightgcn": true,
+    "sasrec": true,
+    "backend": "FAISS_IndexFlatIP",
+    "top_k": 100
+  },
+  "sequence_construction": {
+    "chronological": true,
+    "prefix_before_target": true,
+    "truncate_to_recent_items": 50,
+    "left_padding": true,
+    "same_day_tiebreaker": "item_index",
+    "repeated_interactions_preserved": true,
+    "positive_allowed_in_prefix": true
+  },
+  "sequence_statistics": {
+    "min": 1,
+    "max": 50,
+    "mean": 22.9930325
+  },
+  "validation": {
+    "positive_in_prefix_is_not_invalid": true,
+    "negative_items_must_not_appear_in_complete_history": true
+  },
+  "outputs": {
+    "users": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_users.npy",
+    "positive_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_positive_items.npy",
+    "random_negative_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_random_negative_items.npy",
+    "lightgcn_hard_negative_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_lightgcn_hard_negative_items.npy",
+    "sasrec_hard_negative_items": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_sasrec_hard_negative_items.npy",
+    "sequences": "C:\\Users\\hp\\Desktop\\Hybrid Ecommerce Recommendation Model\\output\\v3_train_sequences.npy"
+  }
+}
