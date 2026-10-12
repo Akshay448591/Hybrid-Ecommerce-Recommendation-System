@@ -1,4 +1,4 @@
-# 🎓 Major Project Defense Guide: Hybrid LightGCN + SASRec V2 Recommendation System
+# 🎓 Major Project Guide: Hybrid LightGCN + SASRec V2 Recommendation System
 
 ## 1. Project Abstract & Motivation
 Contemporary e-commerce recommendation platforms face three fundamental challenges:
