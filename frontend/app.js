@@ -33,15 +33,22 @@ class AuraHybridApp {
   }
 
   detectApiBase() {
-    // If hosted on Render as combined or separate, support auto detection or query param ?api=...
+    if (typeof window === 'undefined') return '';
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('api')) {
-      return urlParams.get('api');
+    const paramApi = urlParams.get('api');
+    if (paramApi) {
+      const cleaned = paramApi.replace(/\/+$/, '');
+      try { localStorage.setItem('HYBRID_API_BASE', cleaned); } catch (_) {}
+      return cleaned;
     }
-    if (window.location.port === '8000') {
+    try {
+      const saved = localStorage.getItem('HYBRID_API_BASE');
+      if (saved && saved.trim()) return saved.trim().replace(/\/+$/, '');
+    } catch (_) {}
+    if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
       return '';
     }
-    return 'http://localhost:8000';
+    return '';
   }
 
   async init() {

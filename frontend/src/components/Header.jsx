@@ -7,7 +7,8 @@ export default function Header({
   currentPersona,
   onSelectPersona,
   cartCount,
-  onOpenCart
+  onOpenCart,
+  isBackendLive = false
 }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -25,14 +26,22 @@ export default function Header({
   return (
     <header className="site-header" id="mainHeader">
       <div className="header-inner">
-        {/* Logo - Name changed from AURA HYBRID to only HYBRID */}
-        <div className="brand-logo" onClick={() => onTabChange('storefront')} style={{ cursor: 'pointer' }}>
-          <div className="logo-gem">
-            <span className="gem-core"></span>
+        <div className="brand-group" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div className="brand-logo" onClick={() => onTabChange('storefront')} style={{ cursor: 'pointer' }}>
+            <div className="logo-gem">
+              <span className="gem-core"></span>
+            </div>
+            <div className="brand-text">
+              <span className="brand-name">HYBRID</span>
+              <span className="brand-sub">Recommendation Platform</span>
+            </div>
           </div>
-          <div className="brand-text">
-            <span className="brand-name">HYBRID</span>
-            <span className="brand-sub">Recommendation Platform</span>
+          <div
+            className="engine-status-pill"
+            title={isBackendLive ? 'PyTorch Hybrid V2 Engine online' : 'Showcase mode active (cloud engine connecting)'}
+          >
+            <span className={`status-dot ${isBackendLive ? 'online' : 'standby'}`}></span>
+            <span className="status-text">{isBackendLive ? 'V2 Live' : 'Showcase'}</span>
           </div>
         </div>
 
