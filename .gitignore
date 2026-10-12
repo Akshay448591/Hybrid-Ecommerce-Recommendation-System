@@ -17,11 +17,15 @@ venv/
 .venv/
 ENV/
 
-# Large training datasets & offline raw outputs
-data/
+# Large training datasets & offline raw outputs (root only)
+/data/
 output/*.pt
 output/*.npy
 output/*.parquet
+
+# Explicitly track backend data files
+!backend/data/
+!backend/data/**
 
 # OS files
 .DS_Store

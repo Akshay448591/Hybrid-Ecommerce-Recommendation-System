@@ -1,0 +1,76 @@
+[
+  {
+    "user_id": 0,
+    "name": "Sophia Martinez",
+    "tagline": "Minimalist Chic & Elevated Essentials",
+    "description": "Prefers clean silhouettes, neutral palettes, fine cashmere knitwear, and tailored wool overcoats.",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [
+      43493,
+      1350,
+      11382
+    ],
+    "preferred_category": "Tops & Knitwear"
+  },
+  {
+    "user_id": 1,
+    "name": "Marcus Vance",
+    "tagline": "Contemporary Streetwear & Heavy Denim",
+    "description": "Loves relaxed fit raw selvedge denim, heavy cotton t-shirts, aviator jackets, and lug-sole loafers.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [
+      43494,
+      17910,
+      61656
+    ],
+    "preferred_category": "Bottoms & Denim"
+  },
+  {
+    "user_id": 6,
+    "name": "Elena Rostova",
+    "tagline": "Luxury Eveningwear & Structured Elegance",
+    "description": "Focuses on premium silk dresses, tailored blazers, leather bags, and statement evening pieces.",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [
+      1351,
+      43495,
+      1768
+    ],
+    "preferred_category": "Dresses & Jumpsuits"
+  },
+  {
+    "user_id": 8,
+    "name": "David Kim",
+    "tagline": "Athletic Motion & Technical Outerwear",
+    "description": "Values breathable technical parkas, performance knit footwear, and modern utility wear.",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [
+      17911,
+      17492,
+      65881
+    ],
+    "preferred_category": "Outerwear & Coats"
+  },
+  {
+    "user_id": 16,
+    "name": "Chloe Bennett",
+    "tagline": "Bohemian Artistry & Crafted Accessories",
+    "description": "Appreciates hand-woven leather totes, fringe cashmere scarves, linen pieces, and acetate eyewear.",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [
+      60751,
+      59,
+      844
+    ],
+    "preferred_category": "Accessories & Bags"
+  },
+  {
+    "user_id": -1,
+    "name": "Guest Explorer",
+    "tagline": "Cold-Start New Visitor (Session-Driven)",
+    "description": "First-time visitor without interaction graph history; recommendations adapt live as items are clicked or added to cart via SASRec.",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80",
+    "history_item_ids": [],
+    "preferred_category": "All"
+  }
+]
